@@ -22,4 +22,4 @@ export class ProdottiVetrinaComponent implements OnInit {
     this.prodotti = this.prodottiService.getProdotti();    
   }
 
-}
+} 
