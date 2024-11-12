@@ -6,6 +6,7 @@
         {{ prodotto.title }}
       </h5>
       <p class="card-text">Prezzo: {{ prodotto.price | currency }}</p>
+      <app-ratings [rating]="prodotto.rating"></app-ratings>
     </div>
   </div>
 </div>

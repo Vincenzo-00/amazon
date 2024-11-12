@@ -7,6 +7,7 @@ import { ProdottiVetrinaComponent } from './components/prodotti-vetrina/prodotti
 import { ProdottiPreviewComponent } from './components/prodotti-preview/prodotti-preview.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RatingsComponent } from './components/rating/ratings.component';
+import { CarrelloComponent } from './components/carrello/carrello.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RatingsComponent } from './components/rating/ratings.component';
     ProdottiVetrinaComponent,
     ProdottiPreviewComponent,
     HeaderComponent,
-    RatingsComponent
+    RatingsComponent,
+    CarrelloComponent
   ],
   imports: [
     BrowserModule,

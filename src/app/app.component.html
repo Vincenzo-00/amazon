@@ -1,4 +1,10 @@
 <app-header></app-header>
 <div class="container py-4">
+  <app-carrello></app-carrello>
+  <hr>
   <app-prodotti-vetrina></app-prodotti-vetrina>
+  <footer class="bg-secodary mt-2">
+    <h3>Cosa pensano di noi</h3>
+    <app-ratings [rating]="ratingMioSito"></app-ratings>
+  </footer>
 </div>

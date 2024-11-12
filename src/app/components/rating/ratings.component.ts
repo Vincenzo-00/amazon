@@ -11,4 +11,6 @@ export class RatingsComponent {
   @Input()
   rating?: Rating;
 
+  stelle = [1, 2, 3, 4, 5];
+
 }
