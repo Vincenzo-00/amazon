@@ -7,12 +7,17 @@ import { Product } from '../models/prodotto';
 })
 export class ProdottiService {
 
+  prodottiACarrello: Product[] = [];
+
   constructor() { }
 
   getProdotti() {
     return PRODOTTI as Product[];
   }
 
-  
+  aggiungiACarrello(prodotto: Product) {
+    this.prodottiACarrello.push(prodotto)
+  }
+
 
 }
