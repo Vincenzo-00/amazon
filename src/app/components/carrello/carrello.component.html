@@ -1,3 +1,11 @@
-<ul class="list-group">
-  <li *ngFor="let p of prodottiService.prodottiACarrello"></li>
+<ul class="list-group" *ngIf="prodottiService.prodottiACarrello.length > 0">
+  <li
+    *ngFor="let p of prodottiService.prodottiACarrello"
+    class="list-group-item"
+  >
+    {{ p.title }}
+  </li>
 </ul>
+<div *ngIf="prodottiService.prodottiACarrello.length == 0">
+  Nessuno prodotto a carrello
+</div>

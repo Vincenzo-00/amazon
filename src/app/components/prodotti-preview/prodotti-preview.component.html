@@ -7,6 +7,13 @@
       </h5>
       <p class="card-text">Prezzo: {{ prodotto.price | currency }}</p>
       <app-ratings [rating]="prodotto.rating"></app-ratings>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="prodottiService.aggiungiACarrello(prodotto)"
+      >
+        Aggiungi al carrello
+      </button>
     </div>
   </div>
 </div>
