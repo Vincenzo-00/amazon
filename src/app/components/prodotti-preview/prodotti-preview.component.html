@@ -1,1 +1,11 @@
-<p>prodotti-preview works!</p>
+<div class="col" *ngIf="prodotto">
+  <div class="card">
+    <img [src]="prodotto.image" [alt]="prodotto.title" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ prodotto.title }}
+      </h5>
+      <p class="card-text">Prezzo: {{ prodotto.price | currency }}</p>
+    </div>
+  </div>
+</div>

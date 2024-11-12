@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ProdottiVetrinaComponent } from './components/prodotti-vetrina/prodotti-vetrina.component';
 import { ProdottiPreviewComponent } from './components/prodotti-preview/prodotti-preview.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RatingsComponent } from './components/rating/ratings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdottiVetrinaComponent,
     ProdottiPreviewComponent,
-    HeaderComponent
+    HeaderComponent,
+    RatingsComponent
   ],
   imports: [
     BrowserModule,
