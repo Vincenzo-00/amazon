@@ -8,6 +8,7 @@ import { ProdottiPreviewComponent } from './components/prodotti-preview/prodotti
 import { HeaderComponent } from './components/header/header.component';
 import { RatingsComponent } from './components/rating/ratings.component';
 import { CarrelloComponent } from './components/carrello/carrello.component';
+import { CarrelloMiniComponent } from './components/carrello-mini/carrello-mini.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CarrelloComponent } from './components/carrello/carrello.component';
     ProdottiPreviewComponent,
     HeaderComponent,
     RatingsComponent,
-    CarrelloComponent
+    CarrelloComponent,
+    CarrelloMiniComponent
   ],
   imports: [
     BrowserModule,

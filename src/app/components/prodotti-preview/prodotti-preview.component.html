@@ -9,10 +9,10 @@
       <app-ratings [rating]="prodotto.rating"></app-ratings>
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary mt-2"
         (click)="prodottiService.aggiungiACarrello(prodotto)"
       >
-        Aggiungi al carrello
+        <i class="bi bi-cart-plus"></i>
       </button>
     </div>
   </div>

@@ -3,6 +3,12 @@
     *ngFor="let p of prodottiService.prodottiACarrello"
     class="list-group-item"
   >
+    <button
+      class="btn btn-danger"
+      (click)="prodottiService.rimuoviDaCarrello(p.id)"
+    >
+      <i class="bi bi-cart-dash"></i>
+    </button>
     {{ p.title }}
   </li>
 </ul>

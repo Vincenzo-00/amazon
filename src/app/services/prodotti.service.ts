@@ -16,7 +16,19 @@ export class ProdottiService {
   }
 
   aggiungiACarrello(prodotto: Product) {
-    this.prodottiACarrello.push(prodotto)
+    if (!this.prodottiACarrello.find(p => p.id == prodotto.id)) {
+      this.prodottiACarrello.push(prodotto)
+
+    }
+  }
+
+  rimuoviDaCarrello(id: number) {
+    const p = this.prodottiACarrello.find(p => p.id == id)
+
+    if (p) {
+      const i = this.prodottiACarrello.indexOf(p);
+      this.prodottiACarrello.splice(i, 1);
+    }
   }
 
 
