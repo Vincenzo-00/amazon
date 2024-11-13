@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PRODOTTI } from "../data/prodotti";
 import { Product } from '../models/prodotto';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,12 @@ export class ProdottiService {
 
   prodottiACarrello: Product[] = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getProdotti() {
-    return PRODOTTI as Product[];
+   return this.http.get<Product[]>("https://fakestoreapi.com/products")
+
+    // return PRODOTTI as Product[];
   }
 
   aggiungiACarrello(prodotto: Product) {

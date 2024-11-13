@@ -15,11 +15,14 @@ export class ProdottiVetrinaComponent implements OnInit {
   //LA STESSA ISTANZA DI UN OGGETTO IN MODO TALE CHE SIA 
   //CONDIVISA IN TUTTO IL PROGETTO
   constructor(private prodottiService: ProdottiService) {
-    
-  } 
-  
-  ngOnInit(): void {
-    this.prodotti = this.prodottiService.getProdotti();    
+
   }
 
-} 
+  ngOnInit(): void {
+    this.prodottiService.getProdotti().subscribe(dati => {
+      this.prodotti = dati;
+
+    });
+  }
+
+}
