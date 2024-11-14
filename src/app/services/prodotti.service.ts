@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { PRODOTTI } from "../data/prodotti";
+// import { PRODOTTI } from "../data/prodotti";
 import { Product } from '../models/prodotto';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,14 @@ export class ProdottiService {
 
   constructor(private http: HttpClient) { }
 
-  getProdotti() {
-   return this.http.get<Product[]>("https://fakestoreapi.com/products")
+  getProdotti(): Observable<Product[]> {
+    return this.http.get<Product[]>("https://fakestoreapi.com/products")
 
     // return PRODOTTI as Product[];
+  }
+
+  getCategories() {
+    return this.http.get<string[]>("https://fakestoreapi.com/products/categories")
   }
 
   aggiungiACarrello(prodotto: Product) {

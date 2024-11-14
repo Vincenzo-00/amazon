@@ -21,7 +21,6 @@ export class ProdottiVetrinaComponent implements OnInit {
   ngOnInit(): void {
     this.prodottiService.getProdotti().subscribe(dati => {
       this.prodotti = dati;
-
     });
   }
 

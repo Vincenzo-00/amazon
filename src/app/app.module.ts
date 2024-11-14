@@ -11,6 +11,9 @@ import { RatingsComponent } from './components/rating/ratings.component';
 import { CarrelloComponent } from './components/carrello/carrello.component';
 import { CarrelloMiniComponent } from './components/carrello-mini/carrello-mini.component';
 import { PippoComponent } from './components/pippo/pippo.component';
+import { ContattiComponent } from './components/contatti/contatti.component';
+import { ChiSiamoComponent } from './components/chi-siamo/chi-siamo.component';
+import { ProdottoDetailComponent } from './components/prodotto-detail/prodotto-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { PippoComponent } from './components/pippo/pippo.component';
     RatingsComponent,
     CarrelloComponent,
     CarrelloMiniComponent,
-    PippoComponent
+    PippoComponent,
+    ContattiComponent,
+    ChiSiamoComponent,
+    ProdottoDetailComponent
   ],
   imports: [
     BrowserModule,
