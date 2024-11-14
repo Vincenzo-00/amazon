@@ -19,6 +19,10 @@ export class ProdottiService {
     // return PRODOTTI as Product[];
   }
 
+  getProdottoById(id: string): Observable<Product> {
+    return this.http.get<Product>("https://fakestoreapi.com/products/" + id);
+  }
+
   getCategories() {
     return this.http.get<string[]>("https://fakestoreapi.com/products/categories")
   }
