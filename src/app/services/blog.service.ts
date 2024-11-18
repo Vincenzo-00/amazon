@@ -14,8 +14,8 @@ export class BlogService {
     return this.http.get<Post[]>("https://jsonplaceholder.typicode.com/posts");
   }
 
-  getPostById(id: string): Observable<Post> {
+  getPostsByIdid(id: string): Observable<Post> {
     return this.http.get<Post>("https://jsonplaceholder.typicode.com/posts/" + id);
-
   }
+
 }

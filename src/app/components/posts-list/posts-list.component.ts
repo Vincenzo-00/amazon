@@ -8,12 +8,15 @@ import { BlogService } from '../../services/blog.service';
   styleUrl: './posts-list.component.css'
 })
 export class PostsListComponent implements OnInit {
-  post: Post[] = [];
+  posts: Post[] = [];
 
-  constructor(public blogService: BlogService) { }
+  constructor(public blogService: BlogService) {
+
+  }
   ngOnInit(): void {
     this.blogService.getPosts().subscribe(dati => {
-      this.post = dati
-    });
+      this.posts = dati
+    })
   }
+
 }

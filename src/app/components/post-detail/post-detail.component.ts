@@ -6,10 +6,7 @@ import { BlogService } from '../../services/blog.service';
   templateUrl: './post-detail.component.html',
   styleUrl: './post-detail.component.css'
 })
-export class PostDetailComponent implements OnInit {
+export class PostDetailComponent {
 
-  constructor(public blogService: BlogService) { }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+
 }
