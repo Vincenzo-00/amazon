@@ -14,12 +14,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" routerLink="/">Vetrina</a>
+        <a
+          class="nav-link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Vetrina</a
+        >
+        <a class="nav-link" routerLink="/artcoli" routerLinkActive="active"
+          >Blog</a
+        >
         <a
           class="nav-link"
           routerLink="/articoli/nuovo"
           routerLinkActive="active"
-          >Blog</a
+          >Nuovo articolo</a
         >
         <a class="nav-link" routerLink="/contatti" routerLinkActive="active"
           >Contatti</a

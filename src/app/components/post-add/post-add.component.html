@@ -1,7 +1,7 @@
-<h1>Nuovo articolo</h1>
-<form>
-  <div class="mb-3" (ngSubmit)="aggiungiPost()">
-    <title></title>
+<h1 #titolo>Nuovo articolo</h1>
+<!-- TEMPLATE REFERENCE VARIABLE -->
+<form (ngSubmit)="aggiungiPost()" #laForm="ngForm">
+  <div class="mb-3">
     <label for="title" class="form label">Titolo</label>
     <input
       type="text"
@@ -10,7 +10,16 @@
       class="form-control"
       placeholder="Titolo..."
       [(ngModel)]="model.title"
+      required
+      #inputTitle="ngModel"
+      [ngClass]="{
+        'is-invalid': inputTitle.invalid && inputTitle.dirty,
+        'is-valid': inputTitle.valid && inputTitle.dirty
+      }"
     />
+    <div class="invalid-feedback" *ngIf="inputTitle.invalid">
+      Titolo non valido
+    </div>
   </div>
   <div class="mb-3">
     <title></title>
@@ -23,7 +32,19 @@
       placeholder="Titolo..."
       rows="5"
       [(ngModel)]="model.body"
+      required
+      #textBody="ngModel"
+      [ngClass]="{ 'is-invalid': textBody.invalid }"
     ></textarea>
+    <div class="invalid-feedback" *ngIf="textBody.invalid">
+      Titolo non valido
+    </div>
   </div>
-  <button type="submit" class="btn btn-primary">Salva</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!laForm.valid">
+    Salva
+  </button>
 </form>
+<pre>
+  {{ model | json }}
+  {{ laForm.valid }}
+</pre>
