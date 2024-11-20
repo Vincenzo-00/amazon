@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PostDTO } from '../../models/post';
 import { BlogService } from '../../services/blog.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post-add',
@@ -12,11 +13,16 @@ export class PostAddComponent {
   //TEMPLATE DRIVEN FORM
   model: PostDTO = new PostDTO();
 
-  constructor(public blogService: BlogService) {
+  constructor(public blogService: BlogService, private router: Router) {
 
   }
 
   aggiungiPost() {
-    this.blogService.addPost(this.model)
+    this.blogService.addPost(this.model).subscribe(dati => {
+      this.router.navigate(['/articoli'])
+      this.model = new PostDTO;
+    }
+
+    )
   }
 }
